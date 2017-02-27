@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  store: one
+  date: 2017-02-27 08:45:44
+  amount: 9.99
+  deposit: 9.99
+  notes: MyString
+
+two:
+  store: two
+  date: 2017-02-27 08:45:44
+  amount: 9.99
+  deposit: 9.99
+  notes: MyString

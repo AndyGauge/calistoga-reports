@@ -1,0 +1,21 @@
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+
+      <h3> Calistoga Reports </h3>
+
+      <div>
+        <% @reports.each do |report| %>
+        <p>
+          <%= link_to(report) do %>
+            <%= report.date.strftime("%Y-%m-%d") %>
+            <%= report.store.display %>
+          <% end %>
+          <%= link_to 'X', report, data: {:confirm => "Delete Report?"}, method: :delete %>
+          <% end %>
+        </p>
+      </div>
+
+      <p><%= link_to 'New Report', new_report_path %> </p>
+
+    </div>
+  </div>

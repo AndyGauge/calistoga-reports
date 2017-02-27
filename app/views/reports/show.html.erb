@@ -1,0 +1,18 @@
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+
+      <h3> Calistoga Report </h3>
+
+      <div>
+        <p>Store: <%= @report.store.display %></p>
+        <p>Date: <%= @report.date.strftime("%Y-%m-%d") %></p>
+
+        <p>$<%= @report.amount %></p>
+        <p>Deposit $<%= @report.deposit %></p>
+        <p><%= @report.notes %></p>
+      </div>
+
+      <p><%= link_to 'New Report', new_report_path %> </p>
+
+    </div>
+  </div>

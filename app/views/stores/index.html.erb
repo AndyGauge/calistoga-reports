@@ -1,0 +1,19 @@
+
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+
+      <h3> Calistoga Stores </h3>
+
+      <div>
+        <% @stores.each do |store| %>
+        <p>
+          <%= store.display %>
+          <%= link_to 'X', store, data: {:confirm => "Delete Store #{store.number}?"}, method: :delete %>
+          <% end %>
+        </p>
+      </div>
+
+      <p><%= link_to 'New Store', new_store_path %> </p>
+
+    </div>
+  </div>
