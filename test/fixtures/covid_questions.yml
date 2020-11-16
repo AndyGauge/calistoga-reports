@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  temperature: MyString
+  travel: false
+  contact: false
+  symptoms: false
+  name: MyString
+  store: one
+
+two:
+  temperature: MyString
+  travel: false
+  contact: false
+  symptoms: false
+  name: MyString
+  store: two

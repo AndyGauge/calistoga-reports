@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Covid Responses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Store</th>
+      <th>Name</th>
+      <th>Temperature</th>
+      <th>Travel</th>
+      <th>Contact</th>
+      <th>Symptoms</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @covid_questions.each do |covid_question| %>
+      <tr class="<%= covid_question.warning ? "covid_warning" : "covid_cool" %>">
+        <td><%= covid_question.created_at.strftime("%m/%d/%Y")%></td>
+        <td><%= covid_question.store&.number %></td>
+        <td><%= covid_question.name %></td>
+        <td><%= covid_question.temperature %></td>
+        <td><%= covid_question.travel %></td>
+        <td><%= covid_question.contact %></td>
+        <td><%= covid_question.symptoms %></td>
+        <td><%= link_to 'Show', covid_question %></td>
+        <td><%= link_to 'Edit', edit_covid_question_path(covid_question) %></td>
+        <td><%= link_to 'Destroy', covid_question, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Covid Question', new_covid_question_path %>

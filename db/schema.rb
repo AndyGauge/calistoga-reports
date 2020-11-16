@@ -10,7 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170227180650) do
+ActiveRecord::Schema.define(version: 20201109234540) do
+
+  create_table "covid_questions", force: :cascade do |t|
+    t.string   "temperature"
+    t.boolean  "travel"
+    t.boolean  "contact"
+    t.boolean  "symptoms"
+    t.string   "name"
+    t.integer  "store_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["store_id"], name: "index_covid_questions_on_store_id"
+  end
 
   create_table "reports", force: :cascade do |t|
     t.integer  "store_id"

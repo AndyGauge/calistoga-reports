@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Store:</strong>
+  <%= @covid_question.store&.display %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @covid_question.name %>
+</p>
+
+<p>
+  <strong>Temperature:</strong>
+  <%= @covid_question.temperature %>
+</p>
+
+<p>
+  <strong>Travel Recently:</strong>
+  <%= @covid_question.travel %>
+</p>
+
+<p>
+  <strong>In Contact with Positive Test:</strong>
+  <%= @covid_question.contact %>
+</p>
+
+<p>
+  <strong>Any Symptoms Recently:</strong>
+  <%= @covid_question.symptoms %>
+</p>
+
+
+<%= link_to 'New Questionnaire', new_covid_question_path %> |
+<%= link_to 'Update Mistakes', edit_covid_question_path(@covid_question) %>
+

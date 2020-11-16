@@ -1,0 +1,18 @@
+<%= simple_form_for(@covid_question) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :store, label_method: :display %>
+    <%= f.input :name %>
+    <%= f.input :temperature, label: "Current Temperature" %>
+    <%= f.input :travel, as: :radio_buttons, label: 'Traveled outside US in the last 14 days?' %>
+    <%= f.input :contact, as: :radio_buttons, label:"Had Contact with a confirmed COVID-19 infected person?" %>
+    <%= f.input :symptoms, as: :radio_buttons, label:"Felt fevers, chills, shortness of breath, difficulty breathing, loss of smell and taste, nauseous, cough, or fever?" %>
+
+
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
